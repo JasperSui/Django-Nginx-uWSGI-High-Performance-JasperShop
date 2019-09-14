@@ -204,6 +204,10 @@ def Search(request, keyword):
 
     product_list = product_list.values().distinct()
 
+    keyword = keyword
+
+    result_number = len(product_list)
+
     return render(request, 'main/search.html', locals())
 
 def UserLogout(request):
