@@ -665,9 +665,9 @@ def BuyItem(request):
                         product.stock -= product_number
                         product.save()
 
-                        TaskChangeOrderStatus.apply_async((order.id,), countdown=300)
-                        TaskChangeOrderStatus.apply_async((order.id,), countdown=1800)
-                        TaskChangeOrderStatus.apply_async((order.id,), countdown=3600)
+                        #TaskChangeOrderStatus.apply_async((order.id,), countdown=300)
+                        #TaskChangeOrderStatus.apply_async((order.id,), countdown=1800)
+                        #TaskChangeOrderStatus.apply_async((order.id,), countdown=3600)
 
 
                 result['status'] = True
@@ -837,12 +837,12 @@ def BuyLimitedItem(request):
                     limited_product.stock -= 1
                     limited_product.save()
 
-                    TaskChangeOrderStatus.apply_async(
-                        (order.id,), countdown=300)
-                    TaskChangeOrderStatus.apply_async(
-                        (order.id,), countdown=1800)
-                    TaskChangeOrderStatus.apply_async(
-                        (order.id,), countdown=3600)
+                    #TaskChangeOrderStatus.apply_async(
+                    #    (order.id,), countdown=300)
+                    #TaskChangeOrderStatus.apply_async(
+                    #    (order.id,), countdown=1800)
+                    #TaskChangeOrderStatus.apply_async(
+                    #    (order.id,), countdown=3600)
 
                 result['status'] = True
 
