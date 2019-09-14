@@ -229,8 +229,8 @@ class Product(models.Model):
     img_path = models.CharField(max_length=255)
     price = models.IntegerField()
     stock = models.IntegerField()
-    sold_number = models.ImageField(default=0)
-    description = models.TextField()
+    sold_number = models.IntegerField(default=0)
+    description = models.TextField(blank=True, null=True)
     is_enabled = Bit1BooleanField(default=True)
 
     class Meta:

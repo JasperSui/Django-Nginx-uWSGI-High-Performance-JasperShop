@@ -662,7 +662,6 @@ def BuyItem(request):
                         order.save()
 
                         cart_list.remove([product.id, product_number])
-
                         product.stock -= product_number
                         product.save()
 
