@@ -11,6 +11,7 @@ from django.http import HttpResponseRedirect
 from django.db import transaction
 from main.tasks import TaskChangeOrderStatus
 import pdb, json, datetime
+from django.views.decorators.csrf import csrf_exempt
 
 def Index(request):
 
@@ -577,10 +578,11 @@ def RemoveFromCart(request):
 
     return JsonResponse(result)
 
+@csrf_exempt
 def BuyItem(request):
     
     result = {"status": False, "errcode": None, "errmsg": None}
-
+    #pdb.set_trace()
     if 'user_id' in request.session:
 
         user = User.objects.get(id=request.session['user_id'])
@@ -599,30 +601,32 @@ def BuyItem(request):
 
         return JsonResponse(result)
 
-    if not cart_list:
+    '''if not cart_list:
 
         result['errcode'] = 50006
         result['errmsg'] = "未知錯誤。"
 
         return JsonResponse(result)
-
-    if request.is_ajax():
+'''
+    #pdb.set_trace()
+    if True:
 
         if request.method == "POST":
 
-            if len(request.POST) <= 0:
+            '''if len(request.POST) <= 0:
 
                 result['errcode'] = 50006
                 result['errmsg'] = "未知錯誤。"
 
                 return JsonResponse(result)
-
+            pdb.set_trace()
             for i in range(0, len(request.POST)):
 
                 temp_list = request.POST.getlist('product_number_list[%s][]' % str(i))
 
                 product_number_list.append(temp_list)
-
+'''
+            product_number_list = [[2,1]]
             with transaction.atomic():
 
                 for unit in product_number_list:
@@ -632,7 +636,7 @@ def BuyItem(request):
 
                     try:
 
-                        product = Product.objects.get(id=product_id)
+                        product = Product.objects.select_for_update().get(id=product_id)
 
                     except Product.DoesNotExist:
 
@@ -665,7 +669,7 @@ def BuyItem(request):
 
                         order.save()
 
-                        cart_list.remove([product.id, product_number])
+                        #cart_list.remove([product.id, product_number])
                         product.stock -= product_number
                         product.save()
 
