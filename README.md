@@ -71,22 +71,43 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 ---
 ### 首頁
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Index1.jpg)
+
 ### 註冊功能
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/register1.jpg)
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Register2.jpg)
 
 ### 登入功能
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Login1.jpg)
+
 ### 搜尋功能
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Search1.jpg)
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Search2.jpg)
 
 ### 商品頁
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Product1.jpg)
+
 ### 購物車頁
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Cart1.jpg)
 
 ### 購買清單頁
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/Purchase1.jpg)
+
 ### 限時特賣頁
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/SpecialSale1.jpg)
 
 ### 限時特賣商品頁
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/SpecialProduct1.jpg)
 
 高併發效能改善實例
 ---
@@ -107,11 +128,13 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 #### Django 原生 (manage.py runserver)
 ---
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/StaticPage1.jpg)
+
 #### Nginx + uWSGI + Django
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/StaticPage2.jpg)
+
 ---
-
-
 
 
 ### 模擬實際搶購商品
@@ -123,7 +146,11 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 #### Django 原生 (manage.py runserver)
 ---
 
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/BuyItem1.jpg)
+
 #### Nginx + uWSGI + Django
+
+![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/BuyItem2.jpg)
 
 ---
 
