@@ -130,9 +130,21 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 
 ![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/StaticPage1.jpg)
 
+```
+伺服器用了 408 秒 只跑了 6951 次的請求就崩潰，且有 1245 次的請求是失敗的
+
+每秒平均請求次數只有 17 次/秒
+```
+
 #### Nginx + uWSGI + Django
 
 ![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/StaticPage2.jpg)
+
+```
+伺服器只用了 7 秒就將 10000 次請求處理完成，且沒有任何請求失敗
+
+每秒平均請求次數為 1344 次/秒，速度為原生框架的 79 倍
+```
 
 ---
 
@@ -148,17 +160,24 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 
 ![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/BuyItem1.jpg)
 
+```
+伺服器用了 392 秒 只跑了 3543 次的請求就崩潰，且有 191 次的請求是失敗的
+
+每秒平均請求次數只有 9 次/秒
+```
+
 #### Nginx + uWSGI + Django
 
 ![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/BuyItem2.jpg)
 
----
+```
+伺服器只用了 135 秒就將 10000 次請求處理完成，且沒有任何請求失敗
 
-## Appendix and FAQ
+每秒平均請求次數為 73.91 次/秒，速度為原生框架的 8 倍
+```
 
-:::info
-如果你對這份專案有什麼建議的話，歡迎留下意見或討論！
 
-:::
+## 結語
 
-###### tags: `Templates` `Documentation`
+待更新
+
