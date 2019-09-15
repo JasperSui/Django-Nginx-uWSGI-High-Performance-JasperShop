@@ -50,9 +50,8 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
     + [模擬實際搶購商品](#--------)
       - [Django 原生 (manage.py runserver)](#django-----managepy-runserver--1)
       - [Nginx + uWSGI + Django](#nginx---uwsgi---django-1)
-  * [Appendix and FAQ](#appendix-and-faq)
-          + [tags: `Templates` `Documentation`](#tags---templates---documentation-)
-
+  * [結語](#----)
+  
 開發環境
 ---
 
