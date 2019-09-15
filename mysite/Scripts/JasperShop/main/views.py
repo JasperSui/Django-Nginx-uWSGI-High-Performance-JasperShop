@@ -865,3 +865,7 @@ def BuyLimitedItem(request):
         result['errmsg'] = "非 Ajax 請求"
 
     return JsonResponse(result)
+
+def StaticPage(request):
+
+    return HttpResponse('')

@@ -29,6 +29,7 @@ urlpatterns = [
     path('user/enable/<str:randomString>', views.UserEnable, name='UserEnable'),
     path('search/<str:keyword>', views.Search, name='Search'),
     path('limited_time_sale/', views.LimitedTimeSale, name='LimitedTimeSale'),
+    path('static_page/', views.StaticPage, name='StaticPage'),
     path('UserLogout/', views.UserLogout, name='UserLogout'),
     path('ajax/UserLogin/', views.UserLogin, name='UserLogin'),
     path('ajax/UserRegister/', views.UserRegister, name='UserRegister'),
