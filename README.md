@@ -125,7 +125,6 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 ```
 
 #### Django 原生 (manage.py runserver)
----
 
 ![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/StaticPage1.jpg)
 
@@ -155,7 +154,6 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
 ```
 
 #### Django 原生 (manage.py runserver)
----
 
 ![image](https://github.com/JasperSui/Django-JasperShop/blob/master/DemoImage/BuyItem1.jpg)
 
