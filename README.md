@@ -45,7 +45,7 @@ Django 因為框架本身有單線程的限制導致併發效能低下，
     + [限時特賣商品頁](#限時特賣商品頁)
   * [高併發效能改善實例](#高併發效能改善實例)
     + [造訪靜態頁面](#造訪靜態頁面)
-      - [Django 原生 (manage.py runserver)](#Django-原生-(manage.py-runserver)
+      - [Django 原生 (manage.py runserver)](#Django-原生-(manage.py-runserver))
       - [Nginx + uWSGI + Django](#Nginx-+-uWSGI-+-Django)
     + [模擬實際搶購商品](#模擬實際搶購商品)
       - [Django 原生 (manage.py runserver)](#Django-原生-(manage.py-runserver)1)
